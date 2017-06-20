@@ -1,0 +1,9 @@
+FROM ubuntu:latest
+
+RUN apt-get update -y && apt-get install g++ -y && apt-get install make -y
+
+COPY ./ /code
+
+WORKDIR /code
+
+CMD ["make"]
