@@ -88,7 +88,7 @@ docker_push: docker_image
 	@docker push $(DOCKER_ALL)
 
 docker_push_prod: docker_image
-	@docker tags $(DOCKER_ALL) $(DOCKER_ALL_PROD)
+	@docker tag $(DOCKER_ALL) $(DOCKER_ALL_PROD)
 	@docker push $(DOCKER_ALL_PROD)
 
 ###############################################################################
